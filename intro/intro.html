@@ -1,0 +1,196 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 //EN">
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<!-- Default -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+ <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
+
+<!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Custom Style -->
+<style>
+.portfolio-item {
+    margin-bottom: 25px;
+    width: 300px;
+    height: 300px;
+    margin-right: 10px;
+    outline: Linen solid thin;
+    background: LightYellow;
+}
+
+h3{
+  color:black;
+}
+
+img {
+  margin-top:40px;
+  vertical-align: middle;
+  max-height:180px;
+}
+
+</style>
+<!-- body html -->
+<body>
+
+<!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Topics
+                    <small>Choose one to categorize!</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+          <!-- first -->
+            <a href = "http://katgames.uphero.com/sept-10-2015/choose_set/interchangeable_set/gamePage.html">
+            <div class="col-md-4 portfolio-item poop">
+                
+                
+                    <img class="img-responsive" src="" alt="">
+                
+                <h3>
+                    El or la?
+                </h3>
+                <p>For Spanish</p>
+            </div>
+            </a>
+
+            <!-- second -->
+            <div class="col-md-4 portfolio-item poop" id="images">
+<a href = "http://katgames.uphero.com/sept-10-2015/choose_set/interchangeable_set/gamePage.html">
+                    <img class="img-responsive" src="" alt="">
+                </a>
+                <h3>
+                    <a href="#">Reversible or not?</a>
+                </h3>
+                <p>For MCAT</p>
+            </div>
+
+            <!-- third -->
+            <div class="col-md-4 portfolio-item poop" id="terms">
+<a href = "http://katgames.uphero.com/sept-10-2015/choose_set/interchangeable_set/gamePage.html">
+                    <img class="img-responsive" src="" alt="">
+                </a>
+                <h3>
+                    <a href="#"></a>
+                </h3>
+                 <p id="one">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+              <!-- Second Projects Row -->
+        <div class="row">
+          <!-- first -->
+            <div class="col-md-4 portfolio-item poop">
+<a href = "http://katgames.uphero.com/sept-10-2015/choose_set/interchangeable_set/gamePage.html">
+                    <img class="img-responsive" src="" alt="">
+                </a>
+                <h3>
+                    <a href="Images/BuyingAMortgageBank.pdf">El or la?</a>
+                </h3>
+                <p>For Spanish</p>
+            </div>
+
+            <!-- second -->
+            <div class="col-md-4 portfolio-item poop" id="images">
+<a href = "http://katgames.uphero.com/sept-10-2015/choose_set/interchangeable_set/gamePage.html">
+                    <img class="img-responsive" src="" alt="">
+                </a>
+                <h3>
+                    <a href="#">Reversible or not?</a>
+                </h3>
+                <p>For MCAT</p>
+            </div>
+
+            <!-- third -->
+            <div class="col-md-4 portfolio-item poop" id="terms">
+<a href = "http://katgames.uphero.com/sept-10-2015/choose_set/interchangeable_set/gamePage.html">
+                    <img class="img-responsive" src="" alt="">
+                </a>
+                <h3>
+                    <a href="#"></a>
+                </h3>
+                 <p id="one">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+         <!-- /.container -->
+
+
+         <!-- javascript -->
+         <script>
+
+var categories = [
+{ "question":"True or false?","topic":"For medical terms","id":19774562,"pic":"images/medical.jpg", "shortName":"medical"},
+{ "question":"Which measure word?","topic":"For Chinese","id":31877892,"pic":"images/chinese.jpg", "shortName":"chinese"},
+{ "question":"Which part of speech?","topic":"For reading Faust (English)","id":57621266,"pic":"images/faust.jpg", "shortName":"faust"},
+{ "question":"Dativ or akkusativ?","topic":"For German verbs","id":49585829,"pic":"images/german.jpg", "shortName":"german"},
+{ "question":"True or false?","topic":"For Computer Science","id":63892663,"pic":"images/javascript.jpg", "shortName":"computerScience"},
+{"question":"Who said it?","topic":"The Hobbit","id":24790265,"pic":"images/hobbit.jpg", "shortName":"hobbit"},
+{"question":"BETA: El or la?","topic":"For any Spanish set","id":7574949,"pic":"images/spanish.jpg", "shortName":"spanish"}
+];
+
+window.onload = function(){
+  console.log("intro.html loaded");
+setListItems();
+};
+
+function setListItems(){
+  console.log("setting category items");
+
+//set questions
+$( 'h3' ).each(function( index ) {
+  $( this ).text(categories[index].question);
+});
+
+//set topics
+$( 'p' ).each(function( index ) {
+  $( this ).text(categories[index].topic); //sets[index].description 
+});
+
+  //set pictures
+  $( 'img' ).each(function( index ) {
+    $( this ).attr("src",(categories[index].pic)); 
+  });
+
+}
+
+
+
+
+//when clicked, change sesssionid
+$(".poop").click(function() {
+  console.log("category clicked");
+  console.log($(".poop").index(this));
+
+//save id of set clicked
+localStorage.currentSet = categories[$(".poop").index(this)].shortName;
+console.log(localStorage.currentSet);
+});
+
+</script>
+         </body>
+
+</html>
